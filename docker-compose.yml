@@ -10,7 +10,6 @@ services:
       - 80:80
     depends_on:
       - db
-      - test_db
     environment:
       APACHE_SERVER_NAME: csba
       APPLICATION_ENV: development
@@ -20,7 +19,6 @@ services:
       KINT: "Labas"
     links:
       - db
-      - test_db
 
   db:
     image: mysql:latest
